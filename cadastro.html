@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>LRF - Cadastrar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
+<!--Jquery-->
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>  
+  <!--Icon-->
+=======
+<!--Icon-->
+>>>>>>> f6a3a39ae8fe58a244f6bda5bf1a106c256681d0
+  <link rel="icon" type="image/png" href="img/icons/favicon.ico" /> 
+<!--Vendor/Fonts-->
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">  
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">  
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+  <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+ <!--CSS's-->
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/style3.css">
+<<<<<<< HEAD
+<script type="text/javascript">
+=======
+<!--Jquery-->
+  <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.mask.min.js"></script>  
+  <script type="text/javascript">
+>>>>>>> f6a3a39ae8fe58a244f6bda5bf1a106c256681d0
+  $(document).ready(function() {
+    $("#cpfcad").mask("000.000.000-00")
+    $("#telefonecad").mask("(00) 0000-0000")
+    $("#cepcad").mask("00000-000")
+    $("#datacad").mask("00/00/0000")
+    $("#celularcad").mask("(00) 0000-00009")
+   
+    $("#celularcad").blur(function(event){
+      if($(this).val().length == 15)(
+        $("#celularcad").mask("(00) 00000-0009"))
+      else(
+        $("#celularcad").mask("(00) 0000-00009")
+      )    
+    })
+  })
+  function validar(){
+				var senha = formcadastro.senhacad.value;
+				var rep_senha = formcadastro.confsenhacad.value;
+				
+				if(senha == "" || senha.length <= 5){
+					alert('Preencha o campo senha com minimo 6 caracteres');
+					formcadastro.senhacad.focus();
+					return false;
+				}
+				
+				if(rep_senha == "" || rep_senha.length <= 5){
+					alert('Preencha o campo senha com minimo 6 caracteres');
+					formcadastro.confsenhacad.focus();
+					return false;
+				}
+				
+				if (senha != rep_senha) {
+					alert('Senhas diferentes');
+					formcadastro.senha.focus();
+					return false;
+				}
+			}
+
+  </script>
+</head>
+
+<body>
+  <div id="cadastro">
+    <form method="post" name="formcadastro">
+
+      <h1><img src=img/logo.png></h1>
+
+      <br>
+      </br>
+      <h2>Cadastro</h2>
+      <br>
+      </br>
+
+      <p>
+        <label for="nomecad">Seu nome:</label>
+        <input id="nomecad" name="nomecad" required="required" type="text" placeholder="Ex: Fulano da Silva" />
+      </p>
+
+      <p>
+        <label for="cpfcad">CPF:</label>
+<<<<<<< HEAD
+        <input type="text" name="cpfcad" id="cpfcad" required="required" placeholder="Ex: 500.715.838-07" />
+=======
+<<<<<<< HEAD
+        <input type="text" name="cpfcad" id="cpfcad" required="required" placeholder="Ex: 500.715.838-07"
+          pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \ title="Digite um CPF no formato: xxx.xxx.xxx-xx">
+=======
+        <input type="text" name="cpfcad" id="cpfcad" required="required" placeholder="Ex: 500.715.838-07" />
+>>>>>>> f26832d55820f37e80dfdf6657d085086471209f
+>>>>>>> f6a3a39ae8fe58a244f6bda5bf1a106c256681d0
+    </p>
+
+      <p>
+        <label for="emailcad">Seu e-mail:</label>
+        <input id="emailcad" name="emailcad" required="required" type="email"
+          placeholder="Ex: contato@lavarapidoferrari.com" />
+      </p>
+
+      <p>
+        <label for="datacad">Sua data de nascimento:</label>
+        <input id="datacad" name="datacad" required="required" type="text"
+          placeholder="Ex: 18/12/1998" />
+      </p>
+
+      <p>
+        <label for="senhacad">Sua senha:</label>
+        <div id="impSenha"></div> 
+        <div id="impForcaSenha"></div>  
+        <div id="erroSenhaForca"></div> 
+        <input id="senhacad" name="senhacad" required="required" type="password" placeholder="Ex: 12345678" onkeyup="validarSenhaForca()"/>
+      </p>
+
+      <p>
+        <label for="confsenhacad">Confirme sua senha:</label>
+        <input id="confsenhacad" name="confsenhacad" required="required" type="password" placeholder="Ex: 12345678" />
+      </p>
+
+      <p>
+        <label for="celularcad">Seu celular:</label>
+        <input id="celularcad" name="celularcad" required="required" type="text" placeholder="Ex: (11) 99542-2424" />
+      </p>  
+
+      <p>
+        <label for="telefonecad">Seu telefone:*</label>
+        <input id="telefonecad" name="telefonecad" required="required" type="text" placeholder="Ex: (11) 2542-2424" />
+      </p> 
+      
+      <p>
+        <label for="cepcad">CEP:</label>
+        <input id="cepcad" name="cepcad" required="required" type="text" placeholder="Ex: 08090-330" />
+      </p>
+
+      <p>
+        <label for="enderecocad">Seu endereço:</label>
+        <input id="enderecocad" name="enderecocad" required="required" type="text" placeholder="Ex: Rua Manoel Paz" />
+      </p>
+
+
+      <p>
+        <label for="numerocad">Número:</label>
+        <input id="numerocad" name="numerocad" required="required" type="text" placeholder="Ex: 102" />
+      </p>
+
+      <p>
+        <label for="complementocad">Complemento:</label>
+        <input id="complementocad" name="complementocad" required="required" type="text" placeholder="Ex: Casa 2" />
+      </p>
+
+      <p>
+        <label for="bairrocad">Bairro:</label>
+        <input id="bairrocad" name="bairrocad" required="required" type="text" placeholder="Ex: São Miguel Paulista" />
+      </p>
+
+      <p>
+        <label for="cidadecad">Cidade:</label>
+        <input id="cidadecad" name="cidadecad" required="required" type="text" placeholder="Ex: São Paulo" />
+      </p>
+
+      <p>
+        <label for="estadocad">Estado:</label>
+        <input id="estadocad" name="estadocad" required="required" type="text" placeholder="Ex: SP" />
+      </p>
+
+   <div class="container-login100-form-btn m-t-20" id="Cadastro">
+        <input type="submit" value="Cadastrar" onclick="return validar()">
+      </div>
+
+    </form>
+  </div>
+  </div>
+  </div>
+  <script src="js/validacoes.js"></script>
+  <script src="js/forcasenha.js"></script>
+</body>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css" data-estilo="meuEstilo">
+    <link rel="stylesheet" href="css/icon.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav style="height: 80px;">
+            <!-- <ul id="slide-out" class="sidenav">
+                <li>
+                    <div class="user-view">
+                        <div class="background">
+                            <img src="img/logo.png" class="Claro_Escuro">
+                            <img src="img/logo-dark.png" class="Escuro_Claro">
+                        </div>
+                        <img class="circle" src="img/person2.jfif">
+                        <a href="#name"><span class="white-text name"></span></a>
+                        <a href="#email"><span class="white-text email"></span></a>
+                    </div>
+                </li>
+                class para desabilitar subheader
+                <li><a class="" id="nome_mostra" href="perfil_new.html">Ronivaldo Costa</a></li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li><a class="waves-effect" href="home_new.html">Home</a></li>
+                <li><a class="waves-effect" href="">Agendamento</a></li>
+                <li><a class="waves-effect" href="carro_new.html">Carro</a></li>
+                <li><a class="waves-effect" href="confi_new.html">Configurações</a></li>
+                <li><a class="waves-effect" href="index.html">Sair</a></li>
+            </ul> -->
+            <!-- <a href="#" data-target="slide-out" class="sidenav-trigger" style="left: -10px; bottom: -15px;"><i
+                    class="material-icons"><img src="img/menu.png" alt="" srcset=""
+                        style="height: 50px; opacity: 0.5;"></i></a> -->
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center"><img src="img/logo2.png" alt="" srcset=""
+                        style="height: 80px; padding: 5px;"></a>
+                <!-- <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">JavaScript</a></li>
+                </ul> -->
+            </div>
+        </nav>
+    </header>
+    <div>
+        <div class="row contLogin">
+
+            <style>
+                .tudoLogin {
+                    margin-top: 25%;
+                    padding: 9px;
+                }
+
+                .mdl2 {
+                    border-radius: 5%;
+                }
+
+                .contLogin {
+                    padding: 15px;
+                }
+                .backLogin{
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 50px;
+                    margin: 10px;
+                }
+                .backLogin img{
+                    max-height: 95px;
+                }
+            </style>
+            <div class="row tudoLogin mdl2">
+                <form action="" id="formLogin">
+                        <div class="center col l6 s12 backLogin">
+                            <img src="img/logo.png" class="Claro_Escuro">
+                            <img src="img/logo-dark.png" class="Escuro_Claro">
+                        </div>
+                        <div class="center col l6 s12">
+                            <br>
+                            <span>Usuario / Email</span>
+                            <input type="text" name="user" id="user" placeholder="Usuario/Email">
+                        </div>
+                        <div class="center col l6 s12">
+                            <span>Senha</span>
+                            <input type="password" name="pass" id="pass" placeholder="Senha">
+                        </div>
+
+                        <div class="center col l6 s12">
+                            <br>
+                            <input type="submit" value="Entrar" class="waves-effect waves-light btn">
+
+                            <input type="button" id="btnCadastro" value="Cadastrar"
+                                class="waves-effect waves-light btn">
+
+                            <div class="col l6 s12 center">
+                                <a href="password_new.html" style="font-weight: bold;">Esqueceu seu senha?</a>
+                            </div>
+
+                            <!-- <a type="submit" class="waves-effect waves-light btn" href="home_new.html">login<i
+                                class="large material-icons">chevron_right</i></a>
+                        <a type="submit" class="waves-effect waves-light btn" href="cadastro_new.html">Cadastro<i
+                                class="large material-icons">chevron_right</i></a> -->
+                        </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Lava-Rapido FERRARI</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
+                        content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>1aaa
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer> -->
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/js.cookie.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/autenticacao.js"></script>
+    <script src="js/rotate.js"></script>
+    <!--<script src="js/javascript.js"></script>-->
+    <script src="js/sidebar.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/select.js"></script>
+    <script src="js/DarkMode.js"></script>
+</body>
+
+</html>

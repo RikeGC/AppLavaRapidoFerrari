@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css" data-estilo="meuEstilo">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="hidden" name="txtID" id="txtID">
+    <script>
+
+    </script>
+    <header>
+        <nav style="height: 80px;">
+            <ul id="slide-out" class="sidenav">
+                <li>
+                    <div class="user-view">
+                        <div class="background">
+                            <img src="img/logo.png" class="Claro_Escuro">
+                            <img src="img/logo-dark.png" class="Escuro_Claro">
+                        </div>
+                        <img class="circle" src="img/person.png">
+                        <a href="#name"><span class="white-text name"></span></a>
+                        <a href="#email"><span class="white-text email"></span></a>
+                    </div>
+                </li>
+                <!--class para desabilitar subheader-->
+                <li><a class="" id="nome_mostra" href="perfil_new.html">Ronivaldo Costa</a></li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li><a class="waves-effect" href="home_new.html">Home</a></li>
+                <li><a class="waves-effect" href="agendamento.html">Agendamento</a></li>
+                <li><a class="waves-effect" href="carro_new.html">Carro</a></li>
+                <li><a class="waves-effect" href="confi_new.html">Configurações</a></li>
+                <li><a class="waves-effect" href="index.html">Sair</a></li>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger" style="left: -10px; bottom: -15px;"><i
+                    class="material-icons"><img src="img/menu.png" alt="" srcset=""
+                        style="height: 50px; opacity: 0.5;"></i></a>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center"><img src="img/logo2.png" alt="" srcset=""
+                        style="height: 80px; padding: 5px;"></a>
+                <!-- <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">JavaScript</a></li>
+                </ul> -->
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        <div class="row s12">
+            <div class="center">
+
+                <h4>Agenda de Carros</h4>
+            </div>
+            <br>
+            <div class="col l6 s12">
+
+                <table id="tabelaAgenda">
+                    <thead>
+                        <tr>
+                            <th>Carro</th>
+                            <th>Data/Hora</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col s12">
+                <br><br>
+                <hr><br><br>
+            </div>
+        </div>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Cancelamento</h4>
+                <p>Deseja cancela serviço agendado</p>
+            </div>
+            <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="btnExcluir">SIM</a>
+                <a href="#!" class="modal-close waves-effect waves-red btn-flat">NÂO</a>
+                
+            </div>
+        </div>
+
+        <h4 id="efeito" class="center">Efetuar Agendamento</h4>
+        <div class="row s12">
+            <br>
+            <div class="input-field col s12" id="select_carro">
+                <span>Selecione Carro</span>
+                <!-- <select>
+                    <option value="" disabled selected>Escolha o Carro</option>
+                    <option value="1">Carro 1</option>
+                    <option value="2">Carro 2</option>
+                    <option value="3">Carro 3</option>
+                </select>
+                <label>Selecione carro</label>-->
+            </div>
+            <br>
+            <div class="input-field col s12" id="select_servico">
+                <span>Selecione Serviço</span>
+                <!-- <select>
+                    <option value="" disabled selected>Escolha o Serviço</option>
+                    <option value="1">Serviço 1</option>
+                    <option value="2">Serviço 2</option>
+                    <option value="3">Serviço 3</option>
+                </select>
+                <label>Selecione serviço</label>-->
+            </div>
+            <br>
+            <div class="input-field col s12">
+                <input type="text" class="datepicker" placeholder="Escolha a data" id="txtData">
+                <label>Selecione data</label>
+            </div>
+            <br>
+            <div class="input-field col s12">
+                <select id="txtHora">
+                    <option value="" disabled selected>Escolha a Hora</option>
+                    <option value="00:00:00">00:00</option>
+                    <option value="11:00:00">11:00</option>
+                    <option value="13:00:00">13:00</option>
+                    <option value="15:00:00">15:00</option>
+                </select>
+                <label>Selecione hora</label>
+            </div>
+            <div class="input-field col s12">
+                <select id="txtLocal">
+                    <option value="" disabled selected>Escolha o local</option>
+                    <option value="1">Lava-Rapido</option>
+                    <option value="2">Casa</option>
+                </select>
+                <label>Selecione local</label>
+            </div>
+            <div class="input-field col s12">
+                <input id="txtEmail" type="text" class="validate">
+                <label for="txtEmail">Email</label>
+            </div>
+            <div class="col s10"></div>
+            <div class="col s2">
+                <style>
+                    #txtValor {
+                        font-size: 18px;
+                        display: none;
+                    }
+                </style>
+                <label for="valor" id="txtValor">R$</label>
+            </div>
+            <br>
+            <!-- <div class="center col l6 s4">
+                <a id="btnAlterar" class="waves-effect waves-light btn">Alterar<i class="large material-icons"></i></a>
+            </div> -->
+            <div class="center col l6 s12">
+                <a style="background: #ee6e73; color:rgb(253, 253, 84); font-weight: bold;" id="btnAgenda"
+                    class="waves-effect waves-light btn"><i class="large material-icons">alarm_add</i> Agendar</a>
+                <!-- </div>
+            <div class="center col l6 s4">
+                <a id="btnExcluir" class="waves-effect waves-light btn">Excluir<i class="large material-icons"></i></a>
+            </div> -->
+                <div class="col s12"></div>
+
+                <!-- <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Lava-Rapido FERRARI</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
+                        content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer> -->
+
+                <script src="js/jquery-3.4.1.min.js"></script>
+                <script src="js/materialize.min.js"></script>
+                <script src="js/js.cookie.min.js"></script>
+                <script src="js/clienteLogado.js"></script>
+                <script src="js/agendamento.js"></script>
+                <script src="js/rotate.js"></script>
+                <script src="js/javascript.js"></script>
+                <script src="js/sidebar.js"></script>
+                <script src="js/modal.js"></script>
+                <script src="js/select.js"></script>
+                <script src="js/DarkMode.js"></script>
+                <script src="js/config-date.js"></script>
+                <script src="js/datapicker.js"></script>
+                <script src="js/autenticacao.js"></script>
+
+</body>
+
+</html>

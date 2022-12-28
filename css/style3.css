@@ -1,0 +1,279 @@
+/* CSS reset */
+
+*, *:before, *:after { 
+    margin:0;
+    padding:0;
+    font-family: Arial,sans-serif;
+    color: black;
+    image-resolution: 350px;
+  }
+  
+  #subir{
+    position:fixed;
+    bottom:0px;
+    right:0px;
+  } 
+
+  body{
+    margin:22px;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  /* esconde as ancoras da tela */
+  a.links{
+    display: none;
+  }
+  
+  /* content que contem os formulários */
+  .content{
+    width: 500px;
+    margin: 0px auto;
+    position: relative;   
+  }
+  
+  /* formatando o cabeçalho dos formulários */
+  h1{
+    image-resolution: 600px;
+    padding: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    
+  }
+  h1:after{
+    image-resolution: 600px;
+    text-align: center;
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+    background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+  }
+  h2{
+    text-align: center;
+    color: #ffe600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  p{
+    margin-bottom:15px;
+  }
+  p:first-child{
+    margin: 0px;
+  }
+  label{
+    color: #ffe600;
+    position: relative;
+  }
+  
+  /**** advanced input styling ****/
+  /* placeholder */
+  ::-webkit-input-placeholder  {
+    color: #bebcbc; 
+    font-style: italic;
+  }
+  input:-moz-placeholder,
+  textarea:-moz-placeholder{
+    color: #bebcbc;
+    font-style: italic;
+  } 
+  input {
+    outline: none;
+  }
+  
+  input:not([type="checkbox"]){
+    width: 100%;
+    margin-top: 4px;
+    padding: 10px;    
+  
+    
+
+    
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  
+  /*estilo do botão submit */
+  input[type="submit"]{
+    width: 100%!important;
+    cursor: pointer;  
+    background: red;
+    padding: 8px 5px;
+    color: #ffe600;
+    font-size: 3vw;  
+    border: 1px solid #ffe600;   
+    margin-bottom: 10px;  
+    text-shadow: 0 1px 1px #ffe600;
+    
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    
+    transition: all 0.2s linear;
+  }
+  input[type="submit"]:hover{
+    background: #ffe600;
+    color: red;
+    font-size: 15px;
+  }
+  
+  /*marcando os links para mudar de um formulário para outro */
+  .link{
+    position: absolute;
+    background: #ffe600;
+    color: red;
+    left: 0px;
+    height: 20px;
+    width: 440px;
+    padding: 17px 30px 20px 30px;
+    font-size: 1vw;
+    text-align: right;
+    border-top: 1px solid red;
+  
+    -webkit-border-radius: 0 0  5px 5px;
+    border-radius: 0 0  5px 5px;
+  }
+  .link a {
+    font-weight: bold;
+    background: #ffe600;
+    padding: 6px;
+    color: red;
+    margin-left: 10px;
+    border: 1px solid red;
+  
+    -webkit-border-radius: 4px;
+    border-radius: 4px;  
+  
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s  linear;
+  }
+  .link a:hover {
+    color: #ffe600;
+    background: red;
+    border: 1px solid #ffe600;
+  }
+  
+  /* estilos para para ambos os formulários */
+  #cadastro, 
+  #login{
+    position: absolute;
+    top: 0px;
+    width: 94%;   
+    padding: 18px 6% 60px 6%;
+    margin: 0 0 35px 0;
+    background: rgb(218, 8, 8);
+    border: 1px solid rgba(147, 184, 189,0.8);
+    
+    border-radius: 5px;
+    
+    -webkit-animation-duration: 0.75s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+  
+    animation-duration: 0.75s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+  }
+  
+  #paracadastro:target ~ .content #cadastro,
+  #paralogin:target ~ .content #login{
+    z-index: 2;
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+  
+    -webkit-animation-delay: 0.75s;
+    animation-delay: 0.75s;
+  }
+  #registro:target ~ .content #login,
+  #paralogin:target ~ .content #cadastro{
+    -webkit-animation-name: fadeOutLeft;
+    animation-name: fadeOutLeft;
+  }
+  
+  /*fadeInLeft*/
+  @-webkit-keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(-20px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(0);
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translate3d(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0);
+    }
+  }
+  
+  /*fadeOutLeft*/
+  @-webkit-keyframes fadeOutLeft {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate3d(-20px)
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(-20px);
+    }
+  }
+  
+  /*@keyframes fadeOutLeft {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+  }
+  */
+
+
+
+.container {
+  width: 100;
+  margin: 0 auto;
+  padding: 0 30px;
+  border: 1px solid #000;
+}
+.link{
+  width: 100;
+  margin: 0 auto;
+  
+}
+
+@media(min-width:461px) and (max-width : 768px) {
+    .container .content .link .links {
+        width: 50%;
+}
+
+
+@media(min-width : 769px) {
+  .container .content .link .links{
+      width: 25%;
+}
+
+@media(max-width:460px) {
+    .container .content .link .links{
+        width: 100%;
+    }
+  }
+}}
+
+.data{
+  display: none;
+}

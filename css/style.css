@@ -1,0 +1,33 @@
+body{
+    background-color: #eee;    
+    color: black;
+}
+span a{
+    text-decoration: none;
+    color: black;
+}
+.Escuro_Claro{
+    display: none;
+}
+.Claro_Escuro{
+    display: block;
+}
+.mdl2{
+    background-color: #fff;
+}
+table{
+    color: black;
+}
+.card-content span{
+    color: black;
+}
+.card .card-action {
+    background-color: #fff;
+}
+::placeholder{
+    color: black;
+    opacity: 1;
+}
+.modal .modal-footer a{
+    color: #ffab40;
+}

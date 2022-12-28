@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>LRF - Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-signin-client_id" content="1033739736753-uluaoq448d46mca80rh66u2a9oi2c7l5.apps.googleusercontent.com">
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="img/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!--===============================================================================================-->
+	
+</head>
+
+<body>
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
+				<form id="formlogin" class="login100-form validate-form">
+					<span class="login100-form-title p-b-33">
+						<img src="img/logo.png" width="250px">
+					</span>
+
+					<div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" id="Login" name="Login" placeholder="Digite seu Login">
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+					</div>
+
+					<div class="wrap-input100 rs1 validate-input" >
+						<input class="input100" type="password" id="Senha" name="Senha" placeholder="Digite uma senha">
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+					</div>
+
+					<div class="container-login100-form-btn m-t-20" id="enviar">
+						<!--=<button class="login100-form-btn" href="home_new.html">						
+							Entrar
+						</button>-->
+
+						<input type="submit" class="login100-form-btn" value="Login">
+
+
+					</div>
+					<div class="g-signin2" data-onsucess="onSignIn" data-theme="Light"></div>
+					<div class="data">
+						<!--<p>Detalhes do Perfil</p>
+						<img id="pic" class="img-circle" width="100" height="100" />
+						<p>Email</p>
+						<p id="email" class="alert alert-danger"></p>
+						<button onclick="signOut()" class="btn btn-danger">Sair</button>
+					</div>-->
+					<div class="text-center p-t-45 p-b-4">
+						<span class="txt1">
+							Esqueceu
+						</span>
+
+						<a href="recuperacao.html" class="txt2 hov1">
+							Usuário / Senha?
+						</a>
+					</div>
+
+					<div class="text-center">
+						<span class="txt1">
+							Não tem conta?
+						</span>
+
+						<a href="cadastro.html" class="txt2 hov1">
+							Cadastrar
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="js/validacoes.js"></script>
+	<script src="js/login.js"></script>
+</body>
+</html>

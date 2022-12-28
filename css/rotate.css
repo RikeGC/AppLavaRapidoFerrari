@@ -1,0 +1,8 @@
+.fer-check ~ #fer-icon{
+    transform: rotate(-1000grad);
+    transition: 3s ease;
+}
+.fer-incheck ~ #fer-icon{
+    transform: rotate(1000grad);
+    transition: 3s ease;
+}
